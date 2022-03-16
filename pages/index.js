@@ -43,20 +43,20 @@ export default function Home() {
         <div className={styles.countryGrid}>
           <Link href="/#sweden">
             <div className={[styles.glass, styles.sweden].join(" ")}>
-              <Image className={styles.map} src={sweden}></Image>
+              <img className={styles.map} src={sweden.src}></img>
               <div className={styles.countryShortSummary}>
                 <h4 className={styles.smallHeading}>Sweden</h4>
-                <Image className={styles.sampleImage} src={swedenPic}></Image>
+                <img className={styles.sampleImage} src={swedenPic.src}></img>
                 <span className={styles.subtext}>3rd July, 2022</span>
               </div>
             </div>
           </Link>
           <Link href="/#germany">
             <div className={[styles.glass, styles.germany].join(" ")}>
-              <Image className={styles.map} src={germany}></Image>
+              <img className={styles.map} src={germany.src}></img>
               <div className={styles.countryShortSummary}>
                 <h4 className={styles.smallHeading}>Germany</h4>
-                <Image className={styles.sampleImage} src={germanyPic}></Image>
+                <img className={styles.sampleImage} src={germanyPic.src}></img>
                 <span className={styles.subtext}>14th April, 2023</span>
               </div>
             </div>
