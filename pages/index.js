@@ -32,8 +32,16 @@ export default function Home() {
     };
     onResize();
     window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+    if (screen && screen.orientation && screen.orientation.addEventListener) {
+      screen.orientation.addEventListener("change", onResize);
+    }
     return () => {
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+      if (screen && screen.orientation && screen.orientation.addEventListener) {
+        screen.orientation.removeEventListener("change", onResize);
+      }
     };
   }, []);
   return (
@@ -44,7 +52,7 @@ export default function Home() {
           backgroundImage: `url(${landing.src})`,
         }}
       >
-        <div>
+        <div className={styles.waveContainer}>
           <Wave />
           <Wave />
           <Wave />
