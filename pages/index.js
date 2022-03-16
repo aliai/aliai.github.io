@@ -44,6 +44,12 @@ export default function Home() {
           backgroundImage: `url(${landing.src})`,
         }}
       >
+        <div>
+          <Wave />
+          <Wave />
+          <Wave />
+          <Wave />
+        </div>
         <span className={[styles.glass1, styles.title].join(" ")}>
           Ali & Tiffy
         </span>
@@ -79,12 +85,7 @@ export default function Home() {
             </div>
           </Link>
         </div>
-        <div>
-          <Wave />
-          <Wave />
-          <Wave />
-          <Wave />
-        </div>
+
         {/* <div className={styles.content}>
           <div className={styles.countries} >
             <Link href="/#sweden">
