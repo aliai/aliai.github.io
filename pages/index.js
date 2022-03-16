@@ -1,17 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import ring from "../public/rings.png";
-import swedenTexture from "../public/swedish.png";
 import landing from "../public/pics/landing.jpg";
-import sweden from "../public/sweden.svg";
-import germany from "../public/germany.svg";
+import sweden from "../public/flags/sweden.svg";
+import germany from "../public/flags/germany.svg";
 import swedenPic from "../public/pics/sweden.jpg";
 import germanyPic from "../public/pics/germany.jpg";
 import Link from "next/link";
-import SwedenBackground from "../public/P1080710.jpg";
 import React from "react";
-import Script from "next/script";
 
 function Wave() {
   return (
@@ -46,7 +40,12 @@ export default function Home() {
               <img className={styles.map} src={sweden.src}></img>
               <div className={styles.countryShortSummary}>
                 <h4 className={styles.smallHeading}>Sweden</h4>
-                <img className={styles.sampleImage} src={swedenPic.src}></img>
+                <div
+                  className={styles.sampleImage}
+                  style={{
+                    backgroundImage: `url(${swedenPic.src})`,
+                  }}
+                ></div>
                 <span className={styles.subtext}>3rd July, 2022</span>
               </div>
             </div>
@@ -56,7 +55,12 @@ export default function Home() {
               <img className={styles.map} src={germany.src}></img>
               <div className={styles.countryShortSummary}>
                 <h4 className={styles.smallHeading}>Germany</h4>
-                <img className={styles.sampleImage} src={germanyPic.src}></img>
+                <div
+                  className={styles.sampleImage}
+                  style={{
+                    backgroundImage: `url(${germanyPic.src})`,
+                  }}
+                ></div>
                 <span className={styles.subtext}>14th April, 2023</span>
               </div>
             </div>
