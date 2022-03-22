@@ -1,0 +1,17 @@
+.stories {
+  max-width: 650px;
+}
+.story {
+  background: whitesmoke;
+  padding: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.topic {
+  color: cadetblue;
+  font-weight: 500;
+  display: block;
+}

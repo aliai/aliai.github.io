@@ -1,0 +1,202 @@
+.main {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  background-image: url("../public/pics/landing.jpg");
+  background-position: 27% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.countryGrid {
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+.smallHeading,
+.title {
+  font-family: "Vollkorn", "Open Sans", sans-serif;
+}
+.subtext {
+  font-family: "Vollkorn", "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--sub-text);
+  text-align: right;
+}
+.smallHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+.countryShortSummary {
+  display: grid;
+  gap: 0.5rem;
+}
+.sampleImage {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  height: calc(var(--vh, 1vh) * 20);
+  width: calc(var(--vh, 1vh) * 30);
+}
+.duplicate {
+  --size: -0.3rem;
+  position: absolute;
+  z-index: -1;
+  left: var(--size);
+  right: var(--size);
+  top: var(--size);
+  bottom: var(--size);
+  background-image: inherit;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(7px);
+}
+.sweden .sampleImage {
+  background-position: 50% 74%;
+}
+.germany .sampleImage {
+  background-position: 60% 50%;
+}
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 2rem;
+  border-radius: 10px;
+  color: var(--text);
+  text-shadow: 1px 1px var(--sub-text);
+}
+.countries {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  position: relative;
+}
+.sweden,
+.germany {
+  cursor: pointer;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  color: var(--text);
+  align-items: center;
+}
+.sweden img.map,
+.germany img.map {
+  padding-right: 2rem;
+  height: calc(var(--vh, 1vh) * 30);
+  transition: all 0.4s;
+  filter: drop-shadow(-1px 1px 2px rgba(0, 0, 0, 0.7));
+  z-index: 2;
+}
+.germany img.map {
+  height: calc(var(--vh, 1vh) * 20);
+}
+.germany:hover img.map,
+.sweden:hover img.map {
+  filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.7));
+  transform: translateX(-4px) translateY(-4px);
+}
+
+@media only screen and (max-width: 1000px) {
+  .title {
+    display: none;
+  }
+  /* .title {
+    font-size: 3rem;
+    right: auto;
+    left: 1rem;
+  } */
+}
+@media only screen and (max-width: 500px) {
+  .title {
+    display: none;
+  }
+  .countryGrid {
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .sweden,
+  .germany {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+  }
+  .countryShortSummary {
+    flex-grow: 1;
+  }
+  .sampleImage {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 25);
+    background-size: cover;
+  }
+  .sweden img.map,
+  .germany img.map {
+    height: auto;
+    width: calc(var(--vw, 1vw) * 25);
+    position: absolute;
+    padding-right: 0;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+@media only screen and (orientation: landscape) and (max-height: 600px) {
+  .title {
+    display: none;
+  }
+  .countryGrid {
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .sweden,
+  .germany {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+  }
+  .countryShortSummary {
+    flex-grow: 1;
+  }
+  .sampleImage {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 25);
+    background-size: cover;
+  }
+  .sweden img.map,
+  .germany img.map {
+    height: auto;
+    width: calc(var(--vw, 1vw) * 10);
+    position: absolute;
+    padding-right: 0;
+    right: 1rem;
+    top: 1rem;
+  }
+  .countryGrid {
+    grid-auto-flow: column;
+  }
+}
