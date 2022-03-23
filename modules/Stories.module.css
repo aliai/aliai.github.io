@@ -3,7 +3,6 @@
 }
 .story {
   background: whitesmoke;
-  padding: 1rem;
   font-size: 1.2rem;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -30,6 +29,14 @@
 .head {
   position: relative;
   display: block;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--bg);
+}
+.body {
+  padding: 0.7rem 1rem;
+}
+.body p {
+  margin-top: 0;
 }
 .corner {
   font-size: 2rem;

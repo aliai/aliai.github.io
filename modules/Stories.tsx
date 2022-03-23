@@ -22,7 +22,7 @@ export default function Stories({
             </span>
             <span className={styles.corner}>{story.corner}</span>
           </span>
-          {story.content}
+          <div className={styles.body}>{story.content}</div>
         </div>
       ))}
     </div>
