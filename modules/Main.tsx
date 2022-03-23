@@ -17,6 +17,7 @@ export default function Main({
 
   return (
     <div className={styles.main}>
+      <Waves />
       <span className={styles.title}>Ali & Tiffy</span>
       <div className={styles.countryGrid}>
         <a
@@ -70,7 +71,6 @@ export default function Main({
           </Glass>
         </a>
       </div>
-      <Waves />
     </div>
   );
 }
