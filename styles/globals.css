@@ -7,14 +7,29 @@ body {
   --secondary: rgb(94, 112, 142);
   --bg: #dee7ec;
   --bg-2: #c7ddec;
+  --font-date: "Bungee", "Open Sans", sans-serif;
+  --font-text: "Montserrat", "Open Sans", sans-serif;
+  --font-head: "Vollkorn", serif;
 
   padding: 0;
   margin: 0;
-  width: calc(var(--vw, 1vw) * 100);
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  font-family: var(--font-text);
   background-color: var(--bg);
+}
+html {
+  overflow: hidden;
+}
+body {
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 a {

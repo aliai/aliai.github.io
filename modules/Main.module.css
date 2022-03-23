@@ -22,10 +22,10 @@
 }
 .smallHeading,
 .title {
-  font-family: "Vollkorn", "Open Sans", sans-serif;
+  font-family: var(--font-head);
 }
 .subtext {
-  font-family: "Vollkorn", "Open Sans", sans-serif;
+  font-family: var(--font-text);
   font-weight: 300;
   font-size: 1.1rem;
   color: var(--text);

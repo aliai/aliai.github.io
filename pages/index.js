@@ -40,7 +40,7 @@ export default function Home() {
         linkId="sweden"
         date={
           <span>
-            July 3rd<span style={{ color: "#333" }}>,</span> 2022
+            July 3<span style={{ color: "#333" }}>,</span> 2022
           </span>
         }
       >
@@ -90,10 +90,10 @@ export default function Home() {
         linkId="germany"
         date={
           <span>
-            April 14th<span style={{ color: "#333" }}>,</span> 2023
+            April 14
+            <span style={{ color: "#333" }}>,</span> 2023
           </span>
         }
-        flipped
       >
         <Stories
           stories={[
@@ -116,22 +116,36 @@ export default function Home() {
               content: <div>Prosecco Reception 🥂</div>,
             },
             {
-              time: "3:00pm",
+              time: "2:45pm",
               content: (
                 <div>
-                  Our officiant Eva will hold the civil wedding ceremony in
-                  Swedish and English. We will have Abeni & Zori as our wedding
-                  witnesses.
+                  Free wedding ceremony: [someone] will talk about how we met
+                  and fell in love ❤️
                 </div>
               ),
             },
             {
               time: "3:30pm",
-              content: <div>Fika 🍰 🧁 🫖</div>,
+              content: <div>Coffee & cake 🍰 🧁 🫖</div>,
             },
             {
-              time: "6:30pm",
+              time: "7:00pm",
               content: <div>Dinner</div>,
+            },
+            {
+              time: "3:00am",
+              content: <div>Bed time</div>,
+            },
+            {
+              time: "8:00am - 10:00am",
+              corner: "🐓",
+              content: (
+                <div>
+                  <p>
+                    Breakfast 🥐 <big>☕</big>
+                  </p>
+                </div>
+              ),
             },
           ]}
         ></Stories>

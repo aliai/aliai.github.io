@@ -6,17 +6,26 @@ import germany from "../public/flags/germany.svg";
 import swedenPic from "../public/pics/sweden.jpg";
 import germanyPic from "../public/pics/germany.jpg";
 import Glass from "./Glass";
+import { useRouter } from "next/router";
 
 export default function Main({
   children,
 }: {
   children: React.ReactChild | React.ReactChild[];
 }) {
+  const routes = useRouter();
+
   return (
     <div className={styles.main}>
       <span className={styles.title}>Ali & Tiffy</span>
       <div className={styles.countryGrid}>
-        <a href="/#sweden">
+        <a
+          href="/#sweden"
+          onClick={(event) => {
+            event.preventDefault();
+            routes.push("/#sweden");
+          }}
+        >
           <Glass className={styles.sweden}>
             <img className={styles.map} src={sweden.src}></img>
             <div className={styles.countryShortSummary}>
@@ -35,7 +44,13 @@ export default function Main({
             </div>
           </Glass>
         </a>
-        <a href="/#germany">
+        <a
+          href="/#germany"
+          onClick={(event) => {
+            event.preventDefault();
+            routes.push("/#germany");
+          }}
+        >
           <Glass className={styles.germany}>
             <img className={styles.map} src={germany.src}></img>
             <div className={styles.countryShortSummary}>
