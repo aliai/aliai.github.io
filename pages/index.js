@@ -30,10 +30,6 @@ export default function Home() {
   }, []);
   return (
     <Page>
-      <span
-        id="logs"
-        style={{ position: "absolute", zIndex: 100, left: 0, top: 0 }}
-      ></span>
       <Main />
       <MainCountry
         title="Malmö, Sweden"
@@ -54,7 +50,7 @@ export default function Home() {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="maps://maps.apple.com/?q=Föreningsgatan+6E"
+                    href="maps://maps.apple.com/?q=Föreningsgatan+6E+21144+Sweden"
                     className={[styles.background, styles.swedenMap].join(" ")}
                   ></a>
                 </div>
@@ -105,7 +101,7 @@ export default function Home() {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="maps://maps.apple.com/?q=Café+Wildau"
+                    href="maps://maps.apple.com/?q=Café+Wildau+16244+Germany"
                     className={[styles.background, styles.germanyMap].join(" ")}
                   ></a>
                 </div>
