@@ -1,5 +1,6 @@
 .stories {
   max-width: 650px;
+  display: grid;
 }
 .story {
   background: whitesmoke;
