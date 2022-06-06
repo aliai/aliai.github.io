@@ -89,7 +89,11 @@ export default function Home() {
                 <div>
                   <b>AlTi</b> wedding quiz. There will be 🏅🥈🥉 for the
                   winners! Install{" "}
-                  <a target="_blank" href="https://quizizz.com/">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://quizizz.com/"
+                  >
                     Quizizz
                   </a>{" "}
                   app if you want to keep the answers for later.
