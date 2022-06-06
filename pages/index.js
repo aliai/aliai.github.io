@@ -43,6 +43,15 @@ export default function Home() {
         <Stories
           stories={[
             {
+              topic: "dresscode",
+              corner: <small>👔👗</small>,
+              content: (
+                <div>
+                  <p>Lagom, elegant but comfy :)</p>
+                </div>
+              ),
+            },
+            {
               time: "2:00pm",
               content: (
                 <div>
@@ -75,8 +84,27 @@ export default function Home() {
               content: <div>Fika 🍰 🧁 🫖</div>,
             },
             {
-              time: "6:30pm",
-              content: <div>Dinner</div>,
+              time: "4:30pm",
+              content: (
+                <div>
+                  <b>AlTi</b> wedding quiz. There will be 🏅🥈🥉 for the
+                  winners! Install{" "}
+                  <a target="_blank" href="https://quizizz.com/">
+                    Quizizz
+                  </a>{" "}
+                  app if you want to keep the answers for later.
+                </div>
+              ),
+            },
+            {
+              time: "6:00pm",
+              content: <div>Dinner, catering by 400grader and Shiraz.</div>,
+            },
+            {
+              topic: "After dinner",
+              content: (
+                <div>Entertainments: games, presentations, dancing.</div>
+              ),
             },
           ]}
         ></Stories>
@@ -93,6 +121,15 @@ export default function Home() {
       >
         <Stories
           stories={[
+            {
+              topic: "dresscode",
+              corner: <small>👗👔</small>,
+              content: (
+                <div>
+                  <p>Lagom, chic but comfy :)</p>
+                </div>
+              ),
+            },
             {
               time: "2:00pm",
               content: (
@@ -124,6 +161,7 @@ export default function Home() {
               time: "3:30pm",
               content: <div>Coffee & cake 🍰 🧁 🫖</div>,
             },
+
             {
               time: "7:00pm",
               content: <div>Dinner</div>,

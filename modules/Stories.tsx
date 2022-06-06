@@ -5,23 +5,31 @@ export default function Stories({
   stories,
   className,
 }: {
-  stories: { content: any; time: any; corner: any }[];
+  stories: { content: any; time: any; corner: any; topic: any }[];
   className?: string;
 }) {
   return (
     <div className={[styles.stories, className].join(" ")}>
-      {stories.map((story) => (
-        <div className={styles.story} key={story.time}>
-          <span className={styles.head}>
-            <span className={styles.topic}>
-              {story.time.includes("-") ? (
-                <Times time={story.time} />
-              ) : (
-                <Time time={story.time} />
-              )}
+      {stories.map((story, i) => (
+        <div className={styles.story} key={story.time ?? i}>
+          {story.time ? (
+            <span className={styles.head}>
+              <span className={styles.topic}>
+                {story.time.includes("-") ? (
+                  <Times time={story.time} />
+                ) : (
+                  <Time time={story.time} />
+                )}
+              </span>
+              <span className={styles.corner}>{story.corner}</span>
             </span>
-            <span className={styles.corner}>{story.corner}</span>
-          </span>
+          ) : null}
+          {story.topic ? (
+            <span className={styles.head}>
+              <span className={styles.topic}>{story.topic}</span>
+              <span className={styles.corner}>{story.corner}</span>
+            </span>
+          ) : null}
           <div className={styles.body}>{story.content}</div>
         </div>
       ))}

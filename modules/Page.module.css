@@ -1,3 +1,9 @@
 .page {
   width: 100%;
+  scroll-snap-type: y mandatory;
+}
+
+.page > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }

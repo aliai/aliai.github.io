@@ -1,0 +1,49 @@
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: grayscale(100%) blur(2px);
+}
+
+.dialog .body {
+  position: relative;
+  background: white;
+  width: 500px;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 1px solid var(--primary);
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--bg);
+}
+
+@media only screen and (max-width: 550px) {
+  .dialog .body {
+    position: relative;
+    background: white;
+    margin: 20px;
+    width: 100%;
+  }
+}

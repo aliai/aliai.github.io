@@ -12,6 +12,42 @@
   order: 2;
 }
 
+.dialogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+}
+
+.dialogFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--text);
+  padding-top: 10px;
+}
+
+.dialogField {
+  margin: 17px 0;
+  font-family: var(--font-text);
+  font-size: 16px;  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.dialogField input {
+  font-family: var(--font-text);
+  font-size: 16px;  
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+}
+
 .active {
   visibility: visible;
 }
@@ -49,6 +85,71 @@
   font-size: 2rem;
 }
 
+.heading .date + .buttonGroup {
+  margin-top: 50px;
+}
+
+.heading p {
+  font-family: var(--font-text);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 30px;
+}
+
+.button {
+  -webkit-appearance: none;
+  position: relative;
+  font-family: var(--font-text);
+  font-size: 21px;  
+  border: 1px solid var(--primary);
+  color: var(--text);
+  border-radius: 8px;
+  background-color: white;
+  overflow: visible;
+  cursor: pointer;
+  padding: 10px 20px;
+  user-select: none;
+  outline: none;
+}
+.button:disabled {
+  background: transparent;
+}
+
+.button.glow:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button.danger {
+  border-color: red;
+}
+
+@keyframes glowing-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
 @media only screen and (max-width: 900px) {
   .main {
     grid-template-columns: auto;
@@ -72,7 +173,7 @@
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
   .main {
     height: 0;
   }
@@ -89,5 +190,12 @@
   }
   .heading h1 {
     margin-bottom: 0.5rem;
+  }
+  .buttonGroup {
+    width: 100%;
+    margin-top: 20px!important;
+  }
+  .button.glow {
+    width: 100%;
   }
 }
