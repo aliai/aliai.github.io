@@ -48,10 +48,6 @@
   border-radius: 6px;
 }
 
-.active {
-  visibility: visible;
-}
-
 .content {
   padding: 1rem;
   overflow-y: auto;
@@ -174,13 +170,6 @@
   }
 }
 @media only screen and (max-width: 550px) {
-  .main {
-    height: 0;
-  }
-  .main.active {
-    height: auto;
-    visibility: visible;
-  }
   .heading {
     margin-top: 0;
     margin-bottom: 0.5rem;

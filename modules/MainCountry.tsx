@@ -39,19 +39,21 @@ const url = ["YXBpLmVsYXN0aWNlbWFpbC5jb20=", "djI=", "ZW1haWw=", "c2VuZA=="];
 
 export default function MainCountry({
   children,
+  completed,
   title,
   linkId,
   date,
   className,
+  style,
 }: {
   children: React.ReactChild | React.ReactChild[];
+  completed?: boolean;
   className?: string;
   title: string;
   linkId: string;
   date: React.ReactNode;
+  style: any;
 }) {
-  const router = useRouter();
-  const [active, setActive] = React.useState(true);
   const [rsvp, setRsvp] = React.useState<{
     loading: boolean;
     error?: Error;
@@ -61,22 +63,7 @@ export default function MainCountry({
     loading: false,
   });
   const nameRef = React.useRef<InputHTMLAttributes<any>>();
-  React.useEffect(() => {
-    const handleRouteChange = () => {
-      setActive(location.hash === `#${linkId}`);
-    };
-    handleRouteChange();
-    router.events.on("hashChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("hashChangeComplete", handleRouteChange);
-    };
-  }, [linkId]);
   const send = React.useCallback((names) => {
-    // setRsvp({ loading: true });
-    // setTimeout(() => {
-    //   setRsvp({ loading: false, error: new Error() });
-    // }, 1000);
-    // return;
     const key = order.map((x) => parts[x]).join("");
     const body = new URLSearchParams(
       Object.entries({
@@ -111,13 +98,22 @@ export default function MainCountry({
       });
   }, []);
   const successfulRsvp = !rsvp.loading && !rsvp.error && rsvp.data;
-  console.log(rsvp);
+
+  if (completed) {
+    return (
+      <div
+        id={linkId}
+        className={[styles.main, className].filter(Boolean).join(" ")}
+        style={style}
+      >
+        {children}
+      </div>
+    );
+  }
   return (
     <div
       id={linkId}
-      className={[styles.main, className, active ? styles.active : undefined]
-        .filter(Boolean)
-        .join(" ")}
+      className={[styles.main, className].filter(Boolean).join(" ")}
     >
       <Dialog
         open={rsvp.open}

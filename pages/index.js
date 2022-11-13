@@ -4,6 +4,8 @@ import Page from "../modules/Page";
 import Main from "../modules/Main";
 import MainCountry from "../modules/MainCountry";
 import Stories from "../modules/Stories";
+import SwedenWedding from "../public/pics/sweden-wedding.jpg";
+import MapOverview from "../public/pics/map-overview.jpg";
 
 export default function Home() {
   React.useEffect(() => {
@@ -39,80 +41,15 @@ export default function Home() {
             July 3<span style={{ color: "#333" }}>,</span> 2022
           </span>
         }
-      >
-        <Stories
-          stories={[
-            {
-              topic: "dresscode",
-              corner: <small>👔👗</small>,
-              content: (
-                <div>
-                  <p>Lagom, elegant but comfy :)</p>
-                </div>
-              ),
-            },
-            {
-              time: "2:00pm",
-              content: (
-                <div>
-                  <p>Arrival, Föreningsgatan 6E in 21144 Malmö</p>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="maps://maps.apple.com/?q=Föreningsgatan+6E+21144+Sweden"
-                    className={[styles.background, styles.swedenMap].join(" ")}
-                  ></a>
-                </div>
-              ),
-            },
-            {
-              time: "2:30pm",
-              content: <div>Prosecco Reception 🥂</div>,
-            },
-            {
-              time: "3:00pm",
-              content: (
-                <div>
-                  Our officiant Eva will hold the civil wedding ceremony in
-                  Swedish and English. We will have Abeni & Zori as our wedding
-                  witnesses.
-                </div>
-              ),
-            },
-            {
-              time: "3:30pm",
-              content: <div>Fika 🍰 🧁 🫖</div>,
-            },
-            {
-              time: "4:30pm",
-              content: (
-                <div>
-                  <b>AlTi</b> wedding quiz. There will be 🏅🥈🥉 for the
-                  winners! Install{" "}
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://quizizz.com/"
-                  >
-                    Quizizz
-                  </a>{" "}
-                  app if you want to keep the answers for later.
-                </div>
-              ),
-            },
-            {
-              time: "6:00pm",
-              content: <div>Dinner, catering by 400grader and Shiraz.</div>,
-            },
-            {
-              topic: "After dinner",
-              content: (
-                <div>Entertainments: games, presentations, dancing.</div>
-              ),
-            },
-          ]}
-        ></Stories>
-      </MainCountry>
+        completed
+        style={{
+          background: "url(" + SwedenWedding.src + ")",
+          backgroundPosition: "52% 50%",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          minHeight: "calc(var(--vh, 1vh) * 100)",
+        }}
+      ></MainCountry>
       <MainCountry
         title="Wildau, Germany"
         linkId="germany"
@@ -126,19 +63,71 @@ export default function Home() {
         <Stories
           stories={[
             {
-              topic: "dresscode",
-              corner: <small>👗👔</small>,
+              topic: "Good to know",
+              corner: "🔖",
               content: (
                 <div>
-                  <p>Lagom, chic but comfy :)</p>
+                  <p>
+                    <b className="sub-text">Book your room</b> in advanced:{" "}
+                    <a href="https://www.cafe-wildau.de/">
+                      https://www.cafe-wildau.de/
+                    </a>
+                  </p>
+                  <p>
+                    <b className="sub-text">Dresscode</b> is lagom, chic but
+                    comfy <small>👗👔</small>
+                  </p>
+                  <p>
+                    <b className="sub-text">Music</b> is a selection of all
+                    guests favorites. Please send us your top 5 party music you
+                    wish to hear in our wedding.
+                  </p>
+                  <p>
+                    <b className="sub-text">Venue</b> has a bouncing castle for
+                    kids, an open bar for adults, a Finnish sauna, a big lake to
+                    swim, a forest to conquer
+                  </p>
+                  <p>
+                    There is plenty of things to do in{" "}
+                    <a href="#eberswalde">Eberswalde</a> and{" "}
+                    <a href="#berlin">Berlin</a>.
+                  </p>
+                  <p>
+                    <img src={MapOverview.src} style={{ width: "100%" }}></img>
+                  </p>
+                  <p>
+                    🚆 Take train from Berlin to Eberswalde. <br />
+                    🚌 Take shuttle bus to the Hotel.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              time: "12:00am - 1:00pm",
+              corner: "🚌",
+              content: (
+                <div>
+                  <p>
+                    Hotel Café Wildau will arrange pick up shuttles every hour
+                    from Eberswalde station.
+                  </p>
                 </div>
               ),
             },
             {
               time: "2:00pm",
+              corner: "💒",
               content: (
                 <div>
-                  <p>Arrival, Café Wildau, Hotel & Resturant am Werbelinsee</p>
+                  <p>
+                    Arrival at{" "}
+                    <b>
+                      Café Wildau<br></br>
+                    </b>
+                    <span className="muted-text">
+                      Hotel & Resturant am Werbelinsee
+                    </span>
+                  </p>
                   <a
                     target="_blank"
                     rel="noreferrer"
@@ -149,29 +138,106 @@ export default function Home() {
               ),
             },
             {
-              time: "2:30pm",
-              content: <div>Prosecco Reception 🥂</div>,
-            },
-            {
-              time: "2:45pm",
+              time: "2:01pm",
+              corner: "🥂",
               content: (
                 <div>
-                  Free wedding ceremony: [someone] will talk about how we met
-                  and fell in love ❤️
+                  <p>
+                    <b className="sub-text">Prosecco Reception</b> welcome
+                    drinks, mingle, finger food and snacks, and we are gonna
+                    play a game.
+                  </p>
                 </div>
               ),
             },
             {
-              time: "3:30pm",
-              content: <div>Coffee & cake 🍰 🧁 🫖</div>,
+              time: "3:00pm",
+              corner: "🍰 🧁 🫖",
+              content: (
+                <div>
+                  <p>Hotel/Pension check-in</p>
+                  <p>
+                    We are gonna cut a specially made wedding cake by Elsi.
+                    Coffee and tea included,{" "}
+                    <a
+                      href="https://sv.wikipedia.org/wiki/Fika"
+                      target="_blank"
+                    >
+                      fika
+                    </a>{" "}
+                    style.
+                  </p>
+                </div>
+              ),
             },
-
+            {
+              time: "4:30pm",
+              corner: "👰🏻🤵🏽",
+              content: (
+                <div>
+                  <p>
+                    <b className="sub-text">Free wedding ceremony</b> Lennart
+                    will talk about how we met and fell in love ❤️
+                  </p>
+                  <hr></hr>
+                  <p className="muted-text">
+                    <small>
+                      Please don't use your <b>phone</b> during this time, we've
+                      hired a professional photographer,{" "}
+                      <a
+                        href="https://www.instagram.com/heleneswelt.fotografie/"
+                        target="_blank"
+                      >
+                        Helene
+                      </a>{" "}
+                      who will take amazing pictures of us 📸
+                    </small>
+                  </p>
+                </div>
+              ),
+            },
+            {
+              time: "6:00pm",
+              corner: "🥈🥇🥉",
+              content: (
+                <div>
+                  <p>
+                    AlTi Quiz! Prepare to answer questions about Ali and Tiffy!
+                    Who knows them the best? Download the Quizizz app from:
+                  </p>
+                  <div className={styles["download-quiz"]}>
+                    <a
+                      href="https://share.quizizz.com/nz4P08MhCM?lng=en"
+                      target="_blank"
+                    >
+                      <img
+                        className="download-app"
+                        src="https://quizizz.com/wf/assets/62fa6419161d3a1ad0681cbf_App_Store.svg"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a
+                      href="https://share.quizizz.com/EBAH8OlhCM?lng=en"
+                      target="_blank"
+                    >
+                      <img
+                        className="download-app"
+                        src="https://quizizz.com/wf/assets/62fa641a161d3a2982681d00_Google_Play.svg"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              ),
+            },
             {
               time: "7:00pm",
+              corner: "🍴",
               content: <div>Dinner</div>,
             },
             {
               time: "3:00am",
+              corner: <small>🛌</small>,
               content: <div>Bed time</div>,
             },
             {
@@ -181,6 +247,116 @@ export default function Home() {
                 <div>
                   <p>
                     Breakfast 🥐 <big>☕</big>
+                  </p>
+                </div>
+              ),
+            },
+            {
+              topic: "Things to do in Eberswalde",
+              content: (
+                <div id="eberswalde">
+                  <p>
+                    <b>Zoo:</b>{" "}
+                    <a href="https://zoo.eberswalde.de" target="_blank">
+                      https://zoo.eberswalde.de/
+                    </a>
+                  </p>
+                  <p>
+                    <b>Monastery Chorin:</b>{" "}
+                    <a href="https://www.kloster-chorin.org" target="_blank">
+                      https://www.kloster-chorin.org/
+                    </a>
+                  </p>
+                  <p>
+                    <b>Icecream shop:</b> http://www.eiscafe-venezia-piazza.de/
+                  </p>
+                  <p>https://www.straussenfarm-liebenstein.de</p>
+                  <p>
+                    <b>Schiffshebewerk:</b>{" "}
+                    <a
+                      href="https://schiffshebewerk-niederfinow.com"
+                      target="_blank"
+                    >
+                      https://schiffshebewerk-niederfinow.com
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.hnee.de/en/University/Central-Facilities/Forest-Botanical-Garden/Forstbotanischer-Garten-Eberswalde-E2168.htm"
+                      target="_blank"
+                    >
+                      Forstbotanischer Garten
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://familiengarten-eberswalde.de"
+                      target="_blank"
+                    >
+                      Family garden
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://fitolino.de" target="_blank">
+                      Indoor playground
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.fleischerei-tassler.de"
+                      target="_blank"
+                    >
+                      Tiffy's family butchery 🥩👌
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://www.bloc48.de" target="_blank">
+                      Climbing
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://wildpark-schorfheide.de" target="_blank">
+                      Wildpark Schorfheide
+                    </a>
+                  </p>
+                </div>
+              ),
+            },
+            {
+              topic: "Things to do in Berlin",
+              content: (
+                <div id="berlin">
+                  <p>
+                    <b>Shopping:</b>{" "}
+                    <a href="https://zoo.eberswalde.de/" target="_blank">
+                      https://zoo.eberswalde.de/
+                    </a>
+                  </p>
+                  <p>
+                    <b>Museums:</b>{" "}
+                    <a href="https://zoo.eberswalde.de/" target="_blank">
+                      https://zoo.eberswalde.de/
+                    </a>
+                  </p>
+                  <p>
+                    <b>Sony center:</b>{" "}
+                    <a href="https://zoo.eberswalde.de/" target="_blank">
+                      https://zoo.eberswalde.de/
+                    </a>
+                  </p>
+                  <p>
+                    <b>TV Tower:</b>{" "}
+                    <a href="https://zoo.eberswalde.de/" target="_blank">
+                      https://zoo.eberswalde.de/
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="http://www.potsdam-park-sanssouci.de"
+                      target="_blank"
+                    >
+                      Potsdam Sanssouci Park
+                    </a>
                   </p>
                 </div>
               ),
