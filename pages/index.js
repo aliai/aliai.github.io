@@ -102,7 +102,7 @@ export default function Home() {
               ),
             },
             {
-              time: "11:30pm",
+              time: "11:30am",
               corner: "🚆",
               content: (
                 <div>
@@ -151,9 +151,9 @@ export default function Home() {
                 <div>
                   <p>
                     Arrival at{" "}
-                    <b>
+                    <span className="sub-text">
                       Café Wildau<br></br>
-                    </b>
+                    </span>
                     <small className="muted-text">
                       Hotel & Resturant am Werbelinsee
                     </small>
