@@ -44,6 +44,14 @@ body::-webkit-scrollbar {
 .muted-text {
   color: var(--gray)
 }
+.links {
+  display: flex;
+  align-items: center;
+  padding-bottom: .5em;
+}
+.links a {
+  margin-left: .3em;
+}
 
 a {
   color: inherit;

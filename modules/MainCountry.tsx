@@ -179,7 +179,7 @@ export default function MainCountry({
                 setRsvp((prev) => ({ ...prev, open: true }));
               }}
             >
-              I'm in!
+              I{"'"}m in!
             </button>
           )}
         </div>

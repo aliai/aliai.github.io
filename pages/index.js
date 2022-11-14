@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import React from "react";
+import React, { Fragment } from "react";
 import Page from "../modules/Page";
 import Main from "../modules/Main";
 import MainCountry from "../modules/MainCountry";
@@ -68,11 +68,14 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    <b className="sub-text">Book your room</b> in advanced:{" "}
-                    <a href="https://www.cafe-wildau.de/">
-                      https://www.cafe-wildau.de/
-                    </a>
+                    <b className="sub-text">Book your room</b> in advanced. We
+                    are staying at{" "}
+                    <a href="https://www.cafe-wildau.de">Café Wildau</a> from
+                    Thursday to Saturday. Contact{" "}
+                    <a href="mailto:info@cafe-wildau.de">info@cafe-wildau.de</a>{" "}
+                    to book your room.
                   </p>
+                  <p>There are other hotels in the area too.</p>
                   <p>
                     <b className="sub-text">Dresscode</b> is lagom, chic but
                     comfy <small>👗👔</small>
@@ -88,28 +91,55 @@ export default function Home() {
                     swim, a forest to conquer
                   </p>
                   <p>
-                    There is plenty of things to do in{" "}
+                    There are plenty of things to do in{" "}
                     <a href="#eberswalde">Eberswalde</a> and{" "}
                     <a href="#berlin">Berlin</a>.
                   </p>
                   <p>
                     <img src={MapOverview.src} style={{ width: "100%" }}></img>
                   </p>
+                </div>
+              ),
+            },
+            {
+              time: "11:30pm",
+              corner: "🚆",
+              content: (
+                <div>
                   <p>
-                    🚆 Take train from Berlin to Eberswalde. <br />
-                    🚌 Take shuttle bus to the Hotel.
+                    🚆 Take the train RE3 from Berlin to{" "}
+                    <span className="sub-text">Eberswalde</span>.
                   </p>
                 </div>
               ),
             },
             {
-              time: "12:00am - 1:00pm",
+              time: "12:30pm",
               corner: "🚌",
               content: (
                 <div>
                   <p>
-                    Hotel Café Wildau will arrange pick up shuttles every hour
-                    from Eberswalde station.
+                    🚌 We have arranged shuttle bus at 12:30 on Friday that
+                    takes you to the wedding venue.
+                  </p>
+                  <p>
+                    🚕 In case you didn{"'"}t make it on time take a cab from{" "}
+                    <span className="sub-text">Eberswalde</span> or{" "}
+                    <span className="sub-text">Britz</span>. You can call one of
+                    these numbers: <br></br>
+                  </p>
+                  <ul>
+                    <li>
+                      <small>Taxi Blau: +491712213106</small>
+                    </li>
+                    <li>
+                      <small>Taxi Wutskowsky: +49333420550</small>
+                    </li>
+                  </ul>
+                  <hr />
+                  <p className="muted-text" style={{ fontSize: "small" }}>
+                    More information will be provided here when we are closer to
+                    the wedding date.
                   </p>
                 </div>
               ),
@@ -124,9 +154,9 @@ export default function Home() {
                     <b>
                       Café Wildau<br></br>
                     </b>
-                    <span className="muted-text">
+                    <small className="muted-text">
                       Hotel & Resturant am Werbelinsee
-                    </span>
+                    </small>
                   </p>
                   <a
                     target="_blank"
@@ -143,9 +173,9 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    <b className="sub-text">Prosecco Reception</b> welcome
-                    drinks, mingle, finger food and snacks, and we are gonna
-                    play a game.
+                    <b className="sub-text">Prosecco Reception</b> includes
+                    welcome drinks, mingle, finger food & snacks, and we are
+                    gonna play a game.
                   </p>
                 </div>
               ),
@@ -155,13 +185,19 @@ export default function Home() {
               corner: "🍰 🧁 🫖",
               content: (
                 <div>
-                  <p>Hotel/Pension check-in</p>
+                  <p>
+                    Hotel/Pension <span className="sub-text">check-in</span>:
+                    which is oddly late, we know! However, it is possible to
+                    store luggage, get ready before this time, and possibility
+                    to access some rooms.
+                  </p>
                   <p>
                     We are gonna cut a specially made wedding cake by Elsi.
                     Coffee and tea included,{" "}
                     <a
                       href="https://sv.wikipedia.org/wiki/Fika"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       fika
                     </a>{" "}
@@ -172,26 +208,32 @@ export default function Home() {
             },
             {
               time: "4:30pm",
-              corner: "👰🏻🤵🏽",
+              corner: "👰🏻‍♀️🧑🏻‍💻",
               content: (
                 <div>
                   <p>
                     <b className="sub-text">Free wedding ceremony</b> Lennart
                     will talk about how we met and fell in love ❤️
                   </p>
+                  <p>
+                    <b className="sub-text">Iranian wedding ceremony</b> which
+                    involves sugar cones!
+                  </p>
+                  <p>
+                    Stay put for <b className="sub-text">group pictures</b>.
+                  </p>
                   <hr></hr>
-                  <p className="muted-text">
-                    <small>
-                      Please don't use your <b>phone</b> during this time, we've
-                      hired a professional photographer,{" "}
-                      <a
-                        href="https://www.instagram.com/heleneswelt.fotografie/"
-                        target="_blank"
-                      >
-                        Helene
-                      </a>{" "}
-                      who will take amazing pictures of us 📸
-                    </small>
+                  <p className="muted-text" style={{ fontSize: "small" }}>
+                    Please don{"'"}t use your <b>phone</b> during the
+                    ceremonies, we{"'"}ve hired a professional photographer,{" "}
+                    <a
+                      href="https://www.instagram.com/heleneswelt.fotografie/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Helene
+                    </a>
+                    , who will take wonderful pictures of everybody 📸
                   </p>
                 </div>
               ),
@@ -209,6 +251,7 @@ export default function Home() {
                     <a
                       href="https://share.quizizz.com/nz4P08MhCM?lng=en"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <img
                         className="download-app"
@@ -219,6 +262,7 @@ export default function Home() {
                     <a
                       href="https://share.quizizz.com/EBAH8OlhCM?lng=en"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <img
                         className="download-app"
@@ -232,12 +276,27 @@ export default function Home() {
             },
             {
               time: "7:00pm",
+              corner: "🍷🥹",
+              content: <div>Wine and speeches</div>,
+            },
+            {
+              time: "7:30pm",
               corner: "🍴",
-              content: <div>Dinner</div>,
+              content: <div>Dinner buffet</div>,
+            },
+            {
+              time: "9:00pm",
+              corner: "💃 🎉 🕺",
+              content: <div>Partttty!</div>,
+            },
+            {
+              time: "12:00am",
+              corner: "🌭",
+              content: <div>Midnight snacks, yum yum.</div>,
             },
             {
               time: "3:00am",
-              corner: <small>🛌</small>,
+              corner: "🛌",
               content: <div>Bed time</div>,
             },
             {
@@ -246,7 +305,8 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    Breakfast 🥐 <big>☕</big>
+                    Breakfast 🥐 <big>☕</big> also for the guests of other
+                    hotels
                   </p>
                 </div>
               ),
@@ -255,70 +315,54 @@ export default function Home() {
               topic: "Things to do in Eberswalde",
               content: (
                 <div id="eberswalde">
-                  <p>
-                    <b>Zoo:</b>{" "}
-                    <a href="https://zoo.eberswalde.de" target="_blank">
-                      https://zoo.eberswalde.de/
-                    </a>
-                  </p>
-                  <p>
-                    <b>Monastery Chorin:</b>{" "}
-                    <a href="https://www.kloster-chorin.org" target="_blank">
-                      https://www.kloster-chorin.org/
-                    </a>
-                  </p>
-                  <p>
-                    <b>Icecream shop:</b> http://www.eiscafe-venezia-piazza.de/
-                  </p>
-                  <p>https://www.straussenfarm-liebenstein.de</p>
-                  <p>
-                    <b>Schiffshebewerk:</b>{" "}
-                    <a
-                      href="https://schiffshebewerk-niederfinow.com"
-                      target="_blank"
-                    >
-                      https://schiffshebewerk-niederfinow.com
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="https://www.hnee.de/en/University/Central-Facilities/Forest-Botanical-Garden/Forstbotanischer-Garten-Eberswalde-E2168.htm"
-                      target="_blank"
-                    >
-                      Forstbotanischer Garten
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="https://familiengarten-eberswalde.de"
-                      target="_blank"
-                    >
-                      Family garden
-                    </a>
-                  </p>
-                  <p>
-                    <a href="https://fitolino.de" target="_blank">
-                      Indoor playground
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="https://www.fleischerei-tassler.de"
-                      target="_blank"
-                    >
-                      Tiffy's family butchery 🥩👌
-                    </a>
-                  </p>
-                  <p>
-                    <a href="https://www.bloc48.de" target="_blank">
-                      Climbing
-                    </a>
-                  </p>
-                  <p>
-                    <a href="https://wildpark-schorfheide.de" target="_blank">
-                      Wildpark Schorfheide
-                    </a>
-                  </p>
+                  <CoolThings
+                    things={[
+                      {
+                        name: "🥩 Tiffy's family butchery 👌",
+                        href: "https://www.fleischerei-tassler.de",
+                      },
+                      {
+                        name: "🍨 Ice cream",
+                        href: "http://www.eiscafe-venezia-piazza.de",
+                      },
+                      {
+                        name: "⛪ Monastery Chorin",
+                        href: "https://www.kloster-chorin.org",
+                      },
+                      {
+                        name: "🚢 Giant lift for boats",
+                        href: "https://schiffshebewerk-niederfinow.com",
+                      },
+                      {
+                        name: "🛝 Family garden",
+                        href: "https://familiengarten-eberswalde.de",
+                      },
+                      {
+                        name: "🛝 Indoor playground",
+                        href: "https://fitolino.de",
+                      },
+                      {
+                        name: "🧗 Climbing center",
+                        href: "https://www.bloc48.de",
+                      },
+                      {
+                        name: "🌳 Botanical garden",
+                        href: "https://www.hnee.de/en/University/Central-Facilities/Forest-Botanical-Garden/Forstbotanischer-Garten-Eberswalde-E2168.htm",
+                      },
+                      {
+                        name: "🪶 Ostrich farm",
+                        href: "https://www.straussenfarm-liebenstein.de",
+                      },
+                      {
+                        name: "🦌 Wild park",
+                        href: "https://wildpark-schorfheide.de",
+                      },
+                      {
+                        name: "🐧 Zoo",
+                        href: "https://zoo.eberswalde.de",
+                      },
+                    ]}
+                  />
                 </div>
               ),
             },
@@ -326,38 +370,71 @@ export default function Home() {
               topic: "Things to do in Berlin",
               content: (
                 <div id="berlin">
-                  <p>
-                    <b>Shopping:</b>{" "}
-                    <a href="https://zoo.eberswalde.de/" target="_blank">
-                      https://zoo.eberswalde.de/
-                    </a>
-                  </p>
-                  <p>
-                    <b>Museums:</b>{" "}
-                    <a href="https://zoo.eberswalde.de/" target="_blank">
-                      https://zoo.eberswalde.de/
-                    </a>
-                  </p>
-                  <p>
-                    <b>Sony center:</b>{" "}
-                    <a href="https://zoo.eberswalde.de/" target="_blank">
-                      https://zoo.eberswalde.de/
-                    </a>
-                  </p>
-                  <p>
-                    <b>TV Tower:</b>{" "}
-                    <a href="https://zoo.eberswalde.de/" target="_blank">
-                      https://zoo.eberswalde.de/
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="http://www.potsdam-park-sanssouci.de"
-                      target="_blank"
-                    >
-                      Potsdam Sanssouci Park
-                    </a>
-                  </p>
+                  <h4 className="sub-text">
+                    <b>Shopping</b>
+                  </h4>
+                  <CoolThings
+                    things={[
+                      {
+                        name: "🛍️ Mall of Berlin",
+                        href: "https://www.mallofberlin.de",
+                      },
+                      {
+                        name: "🛍️ ALEXA Berlin",
+                        href: "https://www.alexacentre.com",
+                      },
+                      {
+                        name: "🛍️ Bikini Berlin",
+                        href: "https://www.bikiniberlin.de",
+                      },
+                    ]}
+                  />
+                  <h4 className="sub-text">
+                    <b>Museums</b>
+                  </h4>
+                  <CoolThings
+                    things={[
+                      {
+                        name: "🦖 Natural Science",
+                        href: "https://www.museumfuernaturkunde.berlin",
+                      },
+                      {
+                        name: "✈️ Technical",
+                        href: "https://sdtb.de/stiftung/startseite",
+                      },
+                      {
+                        name: "🕵🏻 Spy",
+                        href: "https://www.deutsches-spionagemuseum.de",
+                      },
+                      {
+                        name: "🍌 GDR",
+                        href: "https://www.ddr-museum.de",
+                      },
+                    ]}
+                  />
+                  <h4 className="sub-text">
+                    <b>Others</b>
+                  </h4>
+                  <CoolThings
+                    things={[
+                      {
+                        name: "🐼 Zoo",
+                        href: "https://www.zoo-berlin.de",
+                      },
+                      {
+                        name: "🎥 Sony Center",
+                        href: "https://www.sonycenter.de",
+                      },
+                      {
+                        name: "🗼 TV Tower",
+                        href: "https://tv-turm.de",
+                      },
+                      {
+                        name: "🏰 Sanssouci Park in Potsdam",
+                        href: "http://www.spsg.de/schloesser-gaerten/objekt/park-sanssouci",
+                      },
+                    ]}
+                  />
                 </div>
               ),
             },
@@ -365,5 +442,27 @@ export default function Home() {
         ></Stories>
       </MainCountry>
     </Page>
+  );
+}
+
+function CoolThing({ href, children }) {
+  return (
+    <div className="links">
+      <a href={href} target="_blank" rel="noreferrer">
+        {children}
+      </a>
+    </div>
+  );
+}
+
+function CoolThings({ things }) {
+  return (
+    <Fragment>
+      {things.map((x) => (
+        <CoolThing href={x.href} key={x.href}>
+          {x.name}
+        </CoolThing>
+      ))}
+    </Fragment>
   );
 }
