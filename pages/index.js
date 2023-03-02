@@ -300,13 +300,25 @@ export default function Home() {
               content: <div>Bed time</div>,
             },
             {
-              time: "8:00am - 10:00am",
+              time: "8:00am - 10:30am",
               corner: "🐓",
               content: (
                 <div>
                   <p>
-                    Breakfast 🥐 <big>☕</big> also for the guests of other
-                    hotels
+                    Breakfast 🥐 <big>☕</big> we'll pay for all our guests.
+                    Attendance is optional if you are sleepy.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              time: "10:00am",
+              corner: "🧳",
+              content: (
+                <div>
+                  <p>
+                    Checkout; Hotels have very early checkout sadly. We say our
+                    goodbyes 😘
                   </p>
                 </div>
               ),
@@ -318,7 +330,7 @@ export default function Home() {
                   <CoolThings
                     things={[
                       {
-                        name: "🥩 Tiffy's family butchery 👌",
+                        name: <b>🥩 Tiffy's family butchery 👌</b>,
                         href: "https://www.fleischerei-tassler.de",
                       },
                       {
@@ -340,6 +352,10 @@ export default function Home() {
                       {
                         name: "🛝 Indoor playground",
                         href: "https://fitolino.de",
+                      },
+                      {
+                        name: "🏊 Swimming pool",
+                        href: "https://www.baff-bad.de",
                       },
                       {
                         name: "🧗 Climbing center",
