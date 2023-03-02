@@ -119,14 +119,13 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    🚌 We have arranged shuttle bus at 12:30 on Friday that
-                    takes you to the wedding venue.
+                    🚌 We have arranged shuttle bus at <b>12:30</b> on Friday
+                    that takes you to the wedding venue.
                   </p>
                   <p>
                     🚕 In case you didn{"'"}t make it on time take a cab from{" "}
-                    <span className="sub-text">Eberswalde</span> or{" "}
-                    <span className="sub-text">Britz</span>. You can call one of
-                    these numbers: <br></br>
+                    <span className="sub-text">Eberswalde</span>. You can call
+                    one of these numbers: <br></br>
                   </p>
                   <ul>
                     <li>
