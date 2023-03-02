@@ -305,7 +305,7 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    Breakfast 🥐 <big>☕</big> we'll pay for all our guests.
+                    Breakfast 🥐 <big>☕</big> we{"'"}ll pay for all our guests.
                     Attendance is optional if you are sleepy.
                   </p>
                 </div>
@@ -330,7 +330,7 @@ export default function Home() {
                   <CoolThings
                     things={[
                       {
-                        name: <b>🥩 Tiffy's family butchery 👌</b>,
+                        name: <b>🥩 Tiffy{"'"}s family butchery 👌</b>,
                         href: "https://www.fleischerei-tassler.de",
                       },
                       {
