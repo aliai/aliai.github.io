@@ -85,6 +85,20 @@ export default function Home() {
                     guests favorites. Please send us your top 5 party music you
                     wish to hear in our wedding.
                   </p>
+                  <p style={{ display: "flex", gap: 10 }}>
+                    <span style={{ fontSize: 40 }}>🎵</span>
+                    <div>
+                      Share your favorites with us on{" "}
+                      <a
+                        href="https://docs.google.com/document/d/1gzqZPWlTqHr7MyrgiY6eSKAKkZ_xXyNddspT5dysxAI/edit?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        this document
+                      </a>{" "}
+                      or simply text us on Facebook or WhatsApp.
+                    </div>
+                  </p>
                   <p>
                     <b className="sub-text">Venue</b> has a bouncing castle for
                     kids, an open bar for adults, a Finnish sauna, a big lake to
